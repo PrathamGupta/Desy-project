@@ -1,0 +1,62 @@
+{
+    "name": "first-network-org1",
+    "version": "1.0.0",
+    "client": {
+        "organization": "Institute1",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "300"
+                }
+            }
+        }
+    },
+    "organizations": {
+        "Institute1": {
+            "mspid": "Institute1MSP",
+            "peers": [
+                "peer0.institute1.example.com",
+                "peer1.institute1.example.com"
+            ],
+            "certificateAuthorities": [
+                "ca.institute1.example.com"
+            ]
+        }
+    },
+    "peers": {
+        "peer0.institute1.example.com": {
+            "url": "grpcs://localhost:8051",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICFzCCAb2gAwIBAgIUMXByBcs37vdiW8DGrpt+DguxngcwCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIxMTIwMTA3MjAwMFoXDTM2MTEyNzA3MjAwMFowaDELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBl\ncmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMtY2Etc2Vy\ndmVyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzSq1myK5jHeSqFf8lfuL+ZjD\nuGLnDsB3QBllj/A2jVCHAhPRHowTdZt1xIl4JpKAD0OHfVkEoiF+NpK0+NMkJqNF\nMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYE\nFKNAMvBo/BD5Hjzk+166ectiWMI2MAoGCCqGSM49BAMCA0gAMEUCIQCxNb7L7Qi/\noMkyxu6d5UyhJJCDHLfqMpRz/safAzTvnAIgAgrcJK/3nUAl45hwIINbrZ2iYVNZ\nx2hJmuaGHTLRkHc=\n-----END CERTIFICATE-----\n"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer0.institute1.example.com",
+                "hostnameOverride": "peer0.institute1.example.com"
+            }
+        },
+	    "peer1.institute1.example.com": {
+            "url": "grpcs://localhost:9051",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICFzCCAb2gAwIBAgIUMXByBcs37vdiW8DGrpt+DguxngcwCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIxMTIwMTA3MjAwMFoXDTM2MTEyNzA3MjAwMFowaDELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBl\ncmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMtY2Etc2Vy\ndmVyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzSq1myK5jHeSqFf8lfuL+ZjD\nuGLnDsB3QBllj/A2jVCHAhPRHowTdZt1xIl4JpKAD0OHfVkEoiF+NpK0+NMkJqNF\nMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYE\nFKNAMvBo/BD5Hjzk+166ectiWMI2MAoGCCqGSM49BAMCA0gAMEUCIQCxNb7L7Qi/\noMkyxu6d5UyhJJCDHLfqMpRz/safAzTvnAIgAgrcJK/3nUAl45hwIINbrZ2iYVNZ\nx2hJmuaGHTLRkHc=\n-----END CERTIFICATE-----\n"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer1.institute1.example.com",
+                "hostnameOverride": "peer1.institute1.example.com"
+            }
+        }
+
+	
+    },
+    "certificateAuthorities": {
+        "ca.institute1.example.com": {
+            "url": "https://localhost:8054",
+            "caName": "ca.institute1.example.com",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICFzCCAb2gAwIBAgIUMXByBcs37vdiW8DGrpt+DguxngcwCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIxMTIwMTA3MjAwMFoXDTM2MTEyNzA3MjAwMFowaDELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBl\ncmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMtY2Etc2Vy\ndmVyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzSq1myK5jHeSqFf8lfuL+ZjD\nuGLnDsB3QBllj/A2jVCHAhPRHowTdZt1xIl4JpKAD0OHfVkEoiF+NpK0+NMkJqNF\nMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYE\nFKNAMvBo/BD5Hjzk+166ectiWMI2MAoGCCqGSM49BAMCA0gAMEUCIQCxNb7L7Qi/\noMkyxu6d5UyhJJCDHLfqMpRz/safAzTvnAIgAgrcJK/3nUAl45hwIINbrZ2iYVNZ\nx2hJmuaGHTLRkHc=\n-----END CERTIFICATE-----\n"
+            },
+            "httpOptions": {
+                "verify": false
+            }
+        }
+    }
+}

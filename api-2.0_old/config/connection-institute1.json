@@ -1,0 +1,62 @@
+{
+    "name": "first-network-org1",
+    "version": "1.0.0",
+    "client": {
+        "organization": "Institute1",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "300"
+                }
+            }
+        }
+    },
+    "organizations": {
+        "Institute1": {
+            "mspid": "Institute1MSP",
+            "peers": [
+                "peer0.institute1.example.com",
+                "peer1.institute1.example.com"
+            ],
+            "certificateAuthorities": [
+                "ca.institute1.example.com"
+            ]
+        }
+    },
+    "peers": {
+        "peer0.institute1.example.com": {
+            "url": "grpcs://localhost:8051",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICFjCCAb2gAwIBAgIULx9i4y/hD37RgMiBeBypnjOdBbQwCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIxMTEwOTEyMzkwMFoXDTM2MTEwNTEyMzkwMFowaDELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBl\ncmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMtY2Etc2Vy\ndmVyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEfYU23s25LV0jdP67l+BbK0QN\nn+TUSH7YfHS0TOthwenUmYooofQBXa3wBhgKQ6Av+x/FlHnzFTvxBr1f93y6naNF\nMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYE\nFIqwiGAkyJuuFXCf9zX3Z7G5SGhlMAoGCCqGSM49BAMCA0cAMEQCIGBDdCN299hW\nFWTwIT1QG4yZDYuTMFkSw1QCV5om3FpqAiBWG9e88Odjs9+8N8ilSdUPT9a4Pzu0\nJMiKkmSGwa5xug==\n-----END CERTIFICATE-----\n"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer0.institute1.example.com",
+                "hostnameOverride": "peer0.institute1.example.com"
+            }
+        },
+	    "peer1.institute1.example.com": {
+            "url": "grpcs://localhost:${P0PORT1}",
+            "tlsCACerts": {
+                "pem": "${PEERPEM1}"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer1.institute1.example.com",
+                "hostnameOverride": "peer1.institute1.example.com"
+            }
+        }
+
+	
+    },
+    "certificateAuthorities": {
+        "ca.institute1.example.com": {
+            "url": "https://localhost:8054",
+            "caName": "ca.institute1.example.com",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICFjCCAb2gAwIBAgIULx9i4y/hD37RgMiBeBypnjOdBbQwCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIxMTEwOTEyMzkwMFoXDTM2MTEwNTEyMzkwMFowaDELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBl\ncmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMtY2Etc2Vy\ndmVyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEfYU23s25LV0jdP67l+BbK0QN\nn+TUSH7YfHS0TOthwenUmYooofQBXa3wBhgKQ6Av+x/FlHnzFTvxBr1f93y6naNF\nMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYE\nFIqwiGAkyJuuFXCf9zX3Z7G5SGhlMAoGCCqGSM49BAMCA0cAMEQCIGBDdCN299hW\nFWTwIT1QG4yZDYuTMFkSw1QCV5om3FpqAiBWG9e88Odjs9+8N8ilSdUPT9a4Pzu0\nJMiKkmSGwa5xug==\n-----END CERTIFICATE-----\n"
+            },
+            "httpOptions": {
+                "verify": false
+            }
+        }
+    }
+}

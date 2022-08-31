@@ -1,0 +1,62 @@
+{
+    "name": "first-network-org3",
+    "version": "1.0.0",
+    "client": {
+        "organization": "Institute3",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "300"
+                }
+            }
+        }
+    },
+    "organizations": {
+        "Institute3": {
+            "mspid": "Institute3MSP",
+            "peers": [
+                "peer0.institute3.example.com",
+                "peer1.institute3.example.com"
+            ],
+            "certificateAuthorities": [
+                "ca.institute3.example.com"
+            ]
+        }
+    },
+    "peers": {
+        "peer0.institute3.example.com": {
+            "url": "grpcs://localhost:12051",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICFjCCAb2gAwIBAgIUcF/6t7lxgzf9RjWDBxuyZtSBJHowCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIxMTIwMTA3MjAwMFoXDTM2MTEyNzA3MjAwMFowaDELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBl\ncmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMtY2Etc2Vy\ndmVyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEc4dcasUBAoxG59R62/jI7R+R\n6g70KlgOWnm+hoaO3zrQgNtbJQ/AZaUkslOMozCcB9Z6C2+NVA/qKcCOa1MzEKNF\nMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYE\nFKBaCvbB1PT6B4pB4ROFLOPpMTY+MAoGCCqGSM49BAMCA0cAMEQCIEeSBD+y5J9z\n8MUpGk7H/mhzKfwVMGsl3DBmFahMVXsvAiBL9fPVuXUCz9SIlgon8ytr6EOQfgqh\npBWMsW4iLY+iJg==\n-----END CERTIFICATE-----\n"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer0.institute3.example.com",
+                "hostnameOverride": "peer0.institute3.example.com"
+            }
+        },
+	    "peer1.institute3.example.com": {
+            "url": "grpcs://localhost:13051",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICFjCCAb2gAwIBAgIUcF/6t7lxgzf9RjWDBxuyZtSBJHowCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIxMTIwMTA3MjAwMFoXDTM2MTEyNzA3MjAwMFowaDELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBl\ncmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMtY2Etc2Vy\ndmVyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEc4dcasUBAoxG59R62/jI7R+R\n6g70KlgOWnm+hoaO3zrQgNtbJQ/AZaUkslOMozCcB9Z6C2+NVA/qKcCOa1MzEKNF\nMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYE\nFKBaCvbB1PT6B4pB4ROFLOPpMTY+MAoGCCqGSM49BAMCA0cAMEQCIEeSBD+y5J9z\n8MUpGk7H/mhzKfwVMGsl3DBmFahMVXsvAiBL9fPVuXUCz9SIlgon8ytr6EOQfgqh\npBWMsW4iLY+iJg==\n-----END CERTIFICATE-----\n"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer1.institute3.example.com",
+                "hostnameOverride": "peer1.institute3.example.com"
+            }
+        }
+
+	
+    },
+    "certificateAuthorities": {
+        "ca.institute3.example.com": {
+            "url": "https://localhost:10054",
+            "caName": "ca.institute3.example.com",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICFjCCAb2gAwIBAgIUcF/6t7lxgzf9RjWDBxuyZtSBJHowCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIxMTIwMTA3MjAwMFoXDTM2MTEyNzA3MjAwMFowaDELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBl\ncmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMtY2Etc2Vy\ndmVyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEc4dcasUBAoxG59R62/jI7R+R\n6g70KlgOWnm+hoaO3zrQgNtbJQ/AZaUkslOMozCcB9Z6C2+NVA/qKcCOa1MzEKNF\nMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYE\nFKBaCvbB1PT6B4pB4ROFLOPpMTY+MAoGCCqGSM49BAMCA0cAMEQCIEeSBD+y5J9z\n8MUpGk7H/mhzKfwVMGsl3DBmFahMVXsvAiBL9fPVuXUCz9SIlgon8ytr6EOQfgqh\npBWMsW4iLY+iJg==\n-----END CERTIFICATE-----\n"
+            },
+            "httpOptions": {
+                "verify": false
+            }
+        }
+    }
+}

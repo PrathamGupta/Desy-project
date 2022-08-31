@@ -1,0 +1,2 @@
+Installed chaincodes on peer:
+Package ID: chaincode_student_1:7aac5f01a762c8515a519832dd77692b3a58afa249c3bdb383ec17650474591f, Label: chaincode_student_1
